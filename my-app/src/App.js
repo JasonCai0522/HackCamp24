@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+<<<<<<< Updated upstream
 import { useState, useEffect } from 'react';
 import {timer} from './timer';
 
@@ -14,6 +15,11 @@ const workState = {
   rest: 'REST' 
 }
 
+=======
+import creature from './Images/licker.png'; //logic statement that changes the source of the image depending on time
+import hammer from './Images/hammer.png'; //shows up when you cancel a task. 
+import styles from './App.css';
+>>>>>>> Stashed changes
 
 
 function Button() {
@@ -26,6 +32,13 @@ function Button() {
   );
 }
 
+const Image = () => (
+  <img
+    className={styles.image}
+    src="/Images/licker.png'"
+    alt="licker"
+    />
+)
 function App() {
   const [gameState, setGameState] = useState(timerState.notstarted);
   const [work, setWork] = useState(workState.work);
@@ -76,9 +89,16 @@ function App() {
   return (
     <div>
       <h1 style = {{ textAlign: 'center' }}>My Productivity Pal</h1>
+<<<<<<< Updated upstream
       <h1>{seconds}</h1>
       <h1>{minutes}</h1>
       <h1>{hours}</h1>
+=======
+      <img className ="stationary-image" src={creature} width={250} height={250}alt="Hammer"/>
+      <img className ="image" src={hammer} width={250} height={250}alt="Best Friend" />
+      <Button />
+      <Image />
+>>>>>>> Stashed changes
     </div>
   );
 }

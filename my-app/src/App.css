@@ -11,10 +11,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 100vh;
   background-color: #f0f0f0;
 }
 
 .startButton:hover {
   background-color: rgb(101, 101, 104); /* Change background color on hover */
+}
+
+
+
+
+.image {
+  
+  display: block;
+  margin: 0 auto;
+}
+.stationary-image, .image {
+  justify-content: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+.image:focus, .image:hover {
+  animation: wobble 0.10s linear 100;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-20deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }

@@ -16,9 +16,6 @@ const workState = {
   rest: 'REST' 
 }
 
-
-
-
 function Button() {
   return (
     <div className = "container">
@@ -82,7 +79,6 @@ function App() {
   }, [gameState, timerAmount, work])
 
 
-function App() {
   const [isActive, setIsActive] = useState(false);
 
   const toggleButton = (event) => {
@@ -113,5 +109,6 @@ function App() {
 
   );
 }
+
 
 export default App;

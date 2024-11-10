@@ -11,7 +11,6 @@
   background-color: rgb(101, 101, 104); /* Change background color on hover */
 }
 
-<<<<<<< Updated upstream
 
 
 
@@ -48,7 +47,8 @@
   100% {
     transform: translateX(0) rotate(0);
   }
-=======
+}
+
 .startButton {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -77,5 +77,4 @@
   border: none;
   cursor: pointer;
   display: block;
->>>>>>> Stashed changes
 }

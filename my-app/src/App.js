@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import {timer} from './timer';
@@ -19,6 +19,7 @@ import hammer from './Images/hammer.png'; //shows up when you cancel a task.
 import styles from './App.css';
 
 
+<<<<<<< Updated upstream
 function Button() {
   return (
     <div className = "container">
@@ -81,10 +82,22 @@ function App() {
 
   }, [gameState, timerAmount, work])
 
+=======
+
+function App() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleButton = (event) => {
+    setIsActive(prevState => !prevState);  // Toggle the state
+    console.log('Button clicked:', event.target.className);
+
+  };
+>>>>>>> Stashed changes
 
   return (
     <div>
       <h1 style = {{ textAlign: 'center' }}>My Productivity Pal</h1>
+<<<<<<< Updated upstream
       <h1>{seconds}</h1>
       <h1>{minutes}</h1>
       <h1>{hours}</h1>
@@ -93,6 +106,24 @@ function App() {
       <Button />
       <Image />
     </div>
+=======
+
+      <div className = "container">    
+
+        <button
+        onClick={toggleButton}
+        className={isActive ? 'startButton' : "pauseButton"}
+        >{isActive ? 'Start Hatching Process' : 'Pause Hatching Process'}
+        </button>
+        
+        <button
+        className='cancelButton'
+        >Cancel Hatching Process?
+        </button>
+
+      </div>
+    </div>  
+>>>>>>> Stashed changes
   );
 }
 

@@ -22,12 +22,20 @@ function App() {
   const [gameState, setGameState] = useState(timerState.notstarted);
   const [work, setWork] = useState(workState.work);
   const [timerAmount, setTimerAmount] = useState(0);
+  const [isActive, setIsActive] = useState(true);
+  const[count, setCount] = useState(0);
 
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
 
+  const toggleButton = () => {
+    if (gameState === timerState.paused || gameState === timerState.notstarted) {
+      setGameState(timerState.running);
+      console.log(gameState);
+    } else if (gameState === timerState.running){
+      setGameState(timerState.paused)
     }
 
     if (isActive) {

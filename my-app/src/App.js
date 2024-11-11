@@ -17,8 +17,19 @@ const workState = {
   rest: 'REST' 
 }
 
+<<<<<<< Updated upstream
 
+=======
+const Image = () => (
+  <img
+    className={styles.image}
+    src="/Images/licker.png'"
+    alt="licker"
+    />
+)
+>>>>>>> Stashed changes
 function App() {
+
   const [gameState, setGameState] = useState(timerState.notstarted);
   const [work, setWork] = useState(workState.work);
   const [timerAmount, setTimerAmount] = useState(0);
@@ -30,6 +41,7 @@ function App() {
   const [seconds, setSeconds] = useState(0);
 
 
+<<<<<<< Updated upstream
   const toggleButton = () => {
     if (gameState === timerState.paused || gameState === timerState.notstarted) {
       setGameState(timerState.running);
@@ -50,6 +62,8 @@ function App() {
     setIsActive(true);
   }
 
+=======
+>>>>>>> Stashed changes
   useEffect(() => {
     let interval;
 
@@ -101,7 +115,10 @@ function App() {
 
   return (
     <div>
+      <div class="rectangle">
       <h1 style = {{ textAlign: 'center' }}>My Productivity Pal</h1>
+      </div>
+      
 
       <div>00 : {minutes} : {seconds} </div>
 
